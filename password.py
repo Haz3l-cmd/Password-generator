@@ -31,11 +31,10 @@ if len(sys.argv) == 3 :
     #Joins character from the pass_arr  to actually form the password
     pass_gen = ''.join(pass_arr)
     
-    #Prompts user for the file name where store the password
-    file_name = str(input('File name to store generated password : '))
+    
 
     #Creates the file and appends the password
-    with open(file_name, "a" ) as file:
+    with open(sys.argv[2], "a" ) as file:
         file.write(f"\nPassword generaetd is : {pass_gen}")
         file.close()
 
